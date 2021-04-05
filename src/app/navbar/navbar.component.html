@@ -1,9 +1,44 @@
-<h2>Navbar</h2>
-<nav>
-    <ul>
-        <li>
-            <a href="#" routerLink="/users">User</a>
-        </li>
-    </ul>
-</nav>
+<div class="p-1 bg-white">
+  <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+    <svg class="bi me-2" width="25" height="50"><use xlink:href="#bootstrap"/></svg>
+    <span class="fs-5 fw-semibold">User/Role App</span>
+  </a>
+  <ul class="list-unstyled ps-0">
+    <li class="mb-1">
+      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+        Users
+      </button>
+      <div class="collapse show" id="home-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <li><a href="#" routerLink="/users" class="link-dark rounded">List</a></li>
+          <li><a href="#" routerLink="/users/add"class="link-dark rounded">Add</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="mb-1">
+      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+        Roles
+      </button>
+      <div class="collapse" id="dashboard-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <li><a href="#" class="link-dark rounded">List</a></li>
+          <li><a href="#" class="link-dark rounded">Add</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="mb-1">
+      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+        User Roles
+      </button>
+      <div class="collapse" id="orders-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <li><a href="#" class="link-dark rounded">List</a></li>
+          <li><a href="#" class="link-dark rounded">Add</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
 
