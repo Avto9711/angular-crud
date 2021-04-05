@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 import { ShowComponent } from './show/show.component';
+import { ListComponent } from './list/list.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,10 @@ const routes: Routes = [
           {
             path: 'edit/:id',
             component: EditComponent
+          },
+          {
+            path: 'list',
+            component: ListComponent
           }
         ]
       }
