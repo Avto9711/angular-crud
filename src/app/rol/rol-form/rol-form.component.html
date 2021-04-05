@@ -1,0 +1,47 @@
+<div class="py-5 text-center">
+    <h2>Add Rol form</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 col-lg-12">
+
+    <div class="col-md-12 col-lg-12">
+      <h4 class="mb-3">User Information</h4>
+      <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="needs-validation" novalidate>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label for="rolename" class="form-label">Role Name</label>
+            <input 
+                [(ngModel)]="model.roleName" 
+                #roleName="ngModel" 
+                type="text" 
+                class="form-control" 
+                id="rolename"
+                name="rolename"
+                placeholder="" value="" required>
+            <div [hidden]="roleName.valid || roleName.pristine" class="text-danger" >
+              Valid role name is required.
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="roledescription" class="form-label">Role description</label>
+            <textarea 
+            [(ngModel)]="model.roleDescription"
+            #roledescription ="ngModel"
+            name="roledescription" 
+            type="text" 
+            class="form-control" 
+            id="roledescription" 
+            placeholder="" 
+            value="" 
+            >
+            </textarea>
+          </div>
+
+        </div>
+
+        <button [disabled]="userForm.invalid" class="w-100 mt-4 btn btn-primary btn-lg" type="submit">Save User</button>
+      </form>
+    </div>
+  </div>

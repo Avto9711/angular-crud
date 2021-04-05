@@ -7,6 +7,7 @@ import { ShowComponent } from './show/show.component';
 import { UserRoutingModule } from './rol-routing.module';
 import { DataTablesModule } from 'angular-datatables';
 import { FormsModule } from '@angular/forms';
+import { RolFormComponent } from './rol-form/rol-form.component';
 
 
 
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     EditComponent,
     AddComponent,
     ListComponent,
-    ShowComponent
+    ShowComponent,
+    RolFormComponent
   ],
   imports: [
     CommonModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Role } from 'src/app/models/role';
 
 @Component({
   selector: 'app-add',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddComponent implements OnInit {
 
+  model = new Role(0, '', '');
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  AddRole($event: any): void {
+    console.log($event);
   }
 
 }
