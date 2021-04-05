@@ -6,6 +6,7 @@ import { ShowComponent } from './show/show.component';
 
 import { UserRoutingModule } from './user-routing.module';
 import { ListComponent } from './list/list.component';
+import { DataTablesModule } from 'angular-datatables';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ListComponent } from './list/list.component';
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    DataTablesModule
   ],
   exports: [ShowComponent]
 })
