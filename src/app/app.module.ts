@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RolModule } from './rol/rol.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +14,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserModule
+    UserModule,
+    RolModule
   ],
   providers: [],
   bootstrap: [AppComponent]
