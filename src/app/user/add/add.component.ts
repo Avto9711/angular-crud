@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-add',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddComponent implements OnInit {
 
+  model = new User(0, '', '', '', '');
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  AddUser($event: any): void {
+    console.log($event);
   }
 
 }

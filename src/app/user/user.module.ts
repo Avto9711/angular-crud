@@ -7,19 +7,22 @@ import { ShowComponent } from './show/show.component';
 import { UserRoutingModule } from './user-routing.module';
 import { ListComponent } from './list/list.component';
 import { DataTablesModule } from 'angular-datatables';
-
+import { FormsModule } from '@angular/forms';
+import { UserFormComponent } from './user-form/user-form.component';
 
 @NgModule({
   declarations: [
     AddComponent,
     EditComponent,
     ShowComponent,
-    ListComponent
+    ListComponent,
+    UserFormComponent
   ],
   imports: [
     CommonModule,
     UserRoutingModule,
-    DataTablesModule
+    DataTablesModule,
+    FormsModule
   ],
   exports: [ShowComponent]
 })
