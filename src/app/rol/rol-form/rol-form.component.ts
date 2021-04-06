@@ -13,7 +13,7 @@ export class RolFormComponent implements OnInit {
   @Input()
   role!: Role;
 
-  @Output() userEmittedEvent = new EventEmitter<Role>();
+  @Output() roleEmittedEvent = new EventEmitter<Role>();
   constructor() { }
 
   ngOnInit(): void {
@@ -21,7 +21,7 @@ export class RolFormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.userEmittedEvent.emit(Object.assign({}, this.model));
+    this.roleEmittedEvent.emit(Object.assign({}, this.model));
   }
 
 
