@@ -9,6 +9,9 @@ import { ListComponent } from './list/list.component';
 import { DataTablesModule } from 'angular-datatables';
 import { FormsModule } from '@angular/forms';
 import { UserFormComponent } from './user-form/user-form.component';
+import { UserService } from './services/user.service';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,8 +25,10 @@ import { UserFormComponent } from './user-form/user-form.component';
     CommonModule,
     UserRoutingModule,
     DataTablesModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  exports: [ShowComponent]
+  exports: [ShowComponent],
+  providers: [UserService]
 })
 export class UserModule { }
