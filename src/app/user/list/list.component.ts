@@ -2,6 +2,8 @@ import { AfterViewInit, Component, OnInit, Renderer2, OnDestroy } from '@angular
 import { Router } from '@angular/router';
 
 import { Subject } from 'rxjs';
+import { User } from 'src/app/models/user';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-list',
@@ -13,10 +15,13 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
   dtOptions: DataTables.Settings = {};
 
   listenerFn!: () => void;
+  user: User[] = [];
 
-  constructor(private renderer: Renderer2, private router: Router) { }
+  constructor(private renderer: Renderer2, private router: Router, private userService: UserService) { }
+
 
   ngOnInit(): void {
+    this.userService.getUsers().subscribe((data: User[]) => this.user = data);
     this.dtOptions = {
       data: [{id: 1, firstName: 'Angel', lastName: 'Torres', username: 'avto9711', email: 'avto9711@gmail.com'}],
       columns: [{
